@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Ensuring the box-sizing includes padding and borders */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Row styling for product layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        /* Column styling for the two sections of the row */
+        .column {
+            flex: 1;
+            padding: 10px;
+            min-width: 300px;
+        }
+
+        /* Styling the image */
+        .column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Styling for the price */
+        .price {
+            font-size: 24px;
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Clearfix for row */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Styling the back menu for other products */
+        .back-menu {
+            margin-top: 30px;
+        }
+
+        .back-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .back-menu li {
+            margin: 10px 0;
+        }
+
+        .back-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .back-menu a:hover {
+            color: #007BFF;
+        }
+
+        /* Scrollable area for different product angle */
+        .additional-image {
+            margin-top: 20px;
+            overflow-x: auto;
+            padding: 10px;
+            border-top: 2px solid #ddd;
+        }
+
+        .additional-image img {
+            max-width: 70px;
+            height: 120px;
+            margin-right: 10px;
+        }
+
+        /* List Section */
+        .list-container {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        ul {
+            list-style-type: none; /* Removes default bullet points */
+            padding: 0;
+        }
+
+        li {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        li img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px; /* Adds space between image and text */
+        }
+
+        li h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        li p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main Product Section for Detailed View -->
+<div class="row">
+    <!-- Left Column: Image, Name, Price -->
+    <div class="column">
+        <img src="https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/1176b6acfb868c55c7cac504f81e145f.webp" alt="Product Image">
+<h3>Tracksuit</h3>
+
+        <!-- Scrollable Section for Additional Product Images (Different Angles) -->
+        <div class="additional-image">
+            <img src="https://via.placeholder.com/400x300?text=Different+Tracksuit+Angle" alt="Tracksuit - Different Angle">
+            <img src="https://via.placeholder.com/400x300?text=Another+Angle" alt="Tracksuit - Another Angle">
+            <img src="https://via.placeholder.com/400x300?text=Yet+Another+Angle" alt="Tracksuit - Yet Another Angle">
+        </div>
+    </div>
+
+    <!-- Right Column: Product Details -->
+    <div class="column">
+        <h2>Tracksuit Details</h2>
+        <p class="price">RM39.99</p>
+        <h4>Made from a soft material blend that combines cotton and polyester, this tracksuit offers both comfort and durability. It is perfect for casual wear or exercise.</h4>
+        <p class="description">
+            This stylish and comfortable tracksuit is perfect for any casual outing or workout session.
+            Made from a high-quality blend of cotton and polyester, it offers both flexibility and durability.
+            With its sleek design and modern fit, it's a must-have for your wardrobe.
+            Available in multiple sizes and colors to suit your style.
+        </p>
+    </div>
+</div>
+
+<!-- Product List Section -->
+<div class="list-container">
+    <ul>
+        <li>
+            <a href="Product1.html">
+<img src="https://th.bing.com/th/id/R.f35436533861387920d0187e4ff7c397?rik=PYXUaLUmwBuqig&riu=http%3a%2f%2fmenscraze.com%2fwp-content%2fuploads%2f2016%2f05%2fDavid-Gandy-Style.jpg&ehk=boua1Dz78BNmsgP1hebpkQYgugR2%2fzmRWN%2bGvDXAnk8%3d&risl=&pid=ImgRaw&r=0" alt="Product 1">
+            <div>
+                <h3>Product 1</h3>
+                </div>
+        </li>
+        <li>
+            <a href="Short sleeve Shirt.html">
+<img src="https://is4.revolveassets.com/images/p4/n/uv/OBEY-MS377_V1.jpg" alt="Product Image">
+           <div>
+                <h3>Short sleeve Shirt</h3>
+            </div>
+        </li>
+        <li>
+            <a href="Long sleeve Shirt.html">
+<img src="https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/f3ccf2a3a390b76c0e50e12afe40c78d.webp" alt="Product 3">
+            <div>
+                <h3>Long sleeve Shirt</h3>
+            </div>
+        </li>
+<li>
+            <a href="Coat.html">
+<img src="https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/1176b6acfb868c55c7cac504f81e145f.webp" alt="Product Image">
+                    <div>
+                <h3>Coat</h3>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

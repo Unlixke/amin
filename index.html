@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        td {
+            padding: 20px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .product img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation Menu -->
+    <header>
+        <h1>Welcome to Our Shop</h1>
+        <nav>
+            <a href="#help">Help</a>
+            <a href="#cart">Cart</a>
+        </nav>
+    </header>
+
+    <!-- Product Table -->
+    <table id="productTable">
+        <tr>
+            <td>
+                <div class="product">
+<a href="Product1.html">
+                    <img src="https://th.bing.com/th/id/R.f35436533861387920d0187e4ff7c397?rik=PYXUaLUmwBuqig&riu=http%3a%2f%2fmenscraze.com%2fwp-content%2fuploads%2f2016%2f05%2fDavid-Gandy-Style.jpg&ehk=boua1Dz78BNmsgP1hebpkQYgugR2%2fzmRWN%2bGvDXAnk8%3d&risl=&pid=ImgRaw&r=0" alt="Product Image">
+                    <h3>Product 1</h3>
+                    <p class="price">RM29.99</p>
+                </div>
+            </td>
+            <td>
+                <div class="product">
+<a href="Tracksuit.html">
+                    <img src="https://is4.revolveassets.com/images/p4/n/uv/OGUR-MS55_V1.jpg" alt="Product Image">
+                    <h3>Tracksuit</h3>
+                    <p class="price">RM39.99</p>
+                </div>
+            </td>
+            <td>
+                <div class="product">
+<a href="Long sleeve Shirt.html">
+                    <img src="https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/f3ccf2a3a390b76c0e50e12afe40c78d.webp" alt="Product Image">
+                    <h3>Long sleeve Shirt</h3>
+                    <p class="price">RM19.99</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product">
+<a href="Short sleeve Shirt.html">
+                    <img src="https://is4.revolveassets.com/images/p4/n/uv/OBEY-MS377_V1.jpg" alt="Product Image">
+                    <h3>Short sleeve Shirt</h3>
+                    <p class="price">RM49.99</p>
+                </div>
+            </td>
+            <td>
+                <div class="product">
+<a href="Coat.html">
+                    <img src="https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/1176b6acfb868c55c7cac504f81e145f.webp" alt="Product Image">
+                    <h3>Coat</h3>
+                    <p class="price">RM59.99</p>
+                </div>
+            </td>
+            <td>
+                <div class="product">
+<a href="Jacket.html">
+                    <img src="https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/800e5e6f0ab02bf295d42faf51e420a4.webp" alt="Product Image">
+                    <h3>Jacket</h3>
+                    <p class="price">RM69.99</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Add More Button -->
+    <button onclick="addProduct()">Add More Products</button>
+
+    <!-- Help and Cart Sections (Dummy Sections for now) -->
+    <section id="help" style="padding: 40px; text-align: center;">
+        <h2>Help Section</h2>
+        <p>If you need assistance, feel free to contact us or visit our FAQ page.</p>
+    </section>
+
+    <section id="cart" style="padding: 40px; text-align: center;">
+        <h2>Cart Section</h2>
+        <p>Your cart is currently empty. Start shopping now!</p>
+    </section>
+
+    <script>
+        function addProduct() {
+            const newProductRow = document.createElement('tr');
+
+            const newProduct = `
+                <td>
+                    <div class="product">
+                        <img src="https://via.placeholder.com/300x200" alt="Product Image">
+                        <h3>New Product</h3>
+                        <p class="price">RM99.99</p>
+                    </div>
+                </td>
+            `;
+
+            newProductRow.innerHTML = newProduct.repeat(3);  // Add 3 products per row
+            document.getElementById('productTable').appendChild(newProductRow);
+        }
+    </script>
+
+</body>
+</html>
